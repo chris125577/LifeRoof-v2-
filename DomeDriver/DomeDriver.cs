@@ -1,10 +1,24 @@
-// TODO fill in this information for your driver, then remove this line!
-//
 // ASCOM Dome driver for LifeRoof
 //
 // Description:	 Replacement dome driver for prior DLL-based version. Implements async slewing property for shutter
 //
-// Implements:	ASCOM Dome interface version: 1.0
+// // Date			Who	Vers	Description
+// -----------	---	-----	-------------------------------------------------------
+// 10-Nov-2015	CJW	1.0.0	Initial edit, created from ASCOM driver template
+// 24-Dec-2015  CJW 2.0     Re-write of Serial handling, using event handler, thanks to an idea from Per 
+// 26-Dec-2015  CJW 2.1     Included provision in Arduino and here for direct commands
+//                          to bypass Arduino standard safety operations
+// 3 Jan        CJW 2.2     Added other fields to communication phrase, for expansion
+// Nov 16       CJW 2.2    recompiling 
+// Feb 21       CJW 2.3    works with version 2.5 Arduino code, faster status updates
+// Feb'21       CJW 2.4    reworked in Ascom 6.5 templates
+// Feb'21       CJW 2.5    reworked so that open or close waits for response
+// Feb'21       CJW 2.6    updated with different transmission, including sensor overrides
+// Aug'22       CJW 2.7    added supported actions documentation (overdue!!) , 19200 baud
+// Dec'22       CJW 3.0    added BEEPON BEEPOFF and BEEPSTATUS commands - must use with V3 arduino code and V10 of obsy app
+// Jan'23       CJW 3.1    changed logging behavior to help identify special events.
+// Jan'24       CJW 4.0    using new ASCOM extensions in VS, this is an EXE version, borrowing from V3.1 code and implementing slewing property
+// --------------------------------------------------------------------------------
 // Author:		(CJW) cwoodhou@icloud.com
 //
 
